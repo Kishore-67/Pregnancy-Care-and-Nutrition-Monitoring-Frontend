@@ -4,22 +4,48 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Login from './Authentication/Login'
-import SignUp from './Authentication/Signup'
+import Home from './Pages/Home';
+import Hospital_Reg from './Authentication/Hospital_Reg';
+import Doctor_log from './Authentication/Doctor_log.js';
+import User_log from './Authentication/User_log.js';
+import Portal from './Pages/Portal.js'
+import Doc_Portal from './Pages/Doc_portal.js';
+import User_portal from './Pages/User_portal.js';
 const appRouter = createBrowserRouter([
+  
   {
     path: '/',
-    element: <App />
-  },
- {
-    path: '/Login',
-    element:<Login/>
+    element: <App/>
   },
   {
-    path:'/Signup',
-    element:<SignUp/>
+    path:'/Portal',
+    element:<Portal/>
+  },
+ {
+    path: '/User_log',
+    element:<User_log/>
+  },
+  {
+    path:'/Home',
+    element:<Home/>
+  },
+  {
+    path:'/Doctor_log',
+    element:<Doctor_log/>
+  },
+  {
+    path:'/Hospital_reg',
+    element:<Hospital_Reg/>
+  },
+  {
+    path:'/User_Portal',
+    element:<User_portal/>
+  },
+  {
+    path:'/Doc_Portal',
+    element:<Doc_Portal/>
   }
- 
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
