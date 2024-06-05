@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import '../Styles/Navbar1.css';
+import '../Styles/Navbar2.css';
 
 export const Navbar1 = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +15,7 @@ export const Navbar1 = () => {
       >
       </div>
       <ul className={menuOpen ? "nav-links open" : "nav-links"}>
-           <li><NavLink to="/">LogOut</NavLink></li>          
+           <li><NavLink to="/">Logout</NavLink></li>          
 
       </ul>
     </nav>

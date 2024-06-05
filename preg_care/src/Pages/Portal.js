@@ -10,10 +10,10 @@ function Portal() {
       <div className="portal-container">
         <h1>Who Are You?</h1>
         <div className="button-container">
-          <Link to={'/User_portal'}>
+          <Link to={'/User_log'}>
             <button className="portal-button">Patient</button>
           </Link>
-          <Link to={'/Doc_portal'}>
+          <Link to={'/Doc_log'}>
             <button className="portal-button">Doctor</button>
           </Link>
         </div>

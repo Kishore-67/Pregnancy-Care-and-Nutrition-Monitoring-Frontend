@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Typography, TextField, Button, makeStyles } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
@@ -97,7 +98,7 @@ const User_log = () => {
             onChange={handleChange}
             required
           />
-          <TextField
+          {/* <TextField
             className={classes.textField}
             fullWidth
             variant="outlined"
@@ -106,15 +107,17 @@ const User_log = () => {
             value={formData.whatsapp_no}
             onChange={handleChange}
             required
-          />
-          <Button
+          /> */}
+          <Link to={'/User_Portal'}>
+            <Button
             className={classes.submitButton}
-            type="submit"
+            // type="submit"
             variant="contained"
             color="primary"
           >
-            Register
+            Login
           </Button>
+          </Link>
         </form>
       </div>
     </Container>

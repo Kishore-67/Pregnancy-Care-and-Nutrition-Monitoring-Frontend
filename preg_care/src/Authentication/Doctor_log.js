@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Typography, TextField, Button, makeStyles } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
@@ -109,14 +110,14 @@ const Doctor_log= () => {
             onChange={handleChange}
             required
           />
-          <Button
+          <Link to={'./Doc_portal'}></Link><Button
             className={classes.submitButton}
             type="submit"
             variant="contained"
             color="primary"
           >
-            Register
-          </Button>
+            Login
+          </Button><Link/>
         </form>
       </div>
     </Container>
