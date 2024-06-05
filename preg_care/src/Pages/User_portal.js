@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar2 from '../Component/Navbar2'
+import { Link } from 'react-router-dom';
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import '../Styles/User_Portal.css'
 function User_portal() {
@@ -13,7 +14,7 @@ function User_portal() {
         <div style={{position:'absolute',display:'flex',flexDirection:'column',justifyContent:'space-between',marginTop:'20%'}}>
           
           <MenuItem><h3> Dashboard </h3></MenuItem>
-          <MenuItem><h3> Nutrition Tracker </h3></MenuItem>
+         <Link to={'/Nutrition'}><MenuItem><h3> Nutrition Tracker </h3></MenuItem></Link> 
           <MenuItem><h3> Calendar </h3></MenuItem>
           <MenuItem><h3> Reports </h3></MenuItem>
           </div>
