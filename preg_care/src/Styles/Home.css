@@ -1,5 +1,166 @@
-.Main{
-    height: 100%;
-     width: 100%;
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+body {
+  margin: 0;
+  width: 100%;
+  font-family: "Kanit", sans-serif;
+  background-color: #F5F9FE; /* Set background color for the entire page */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+
+.home{
+  background: #F5F9FE;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background: #F5F9FE;
+  color: #c469b9;
+  padding: 60px 20px;
+  margin-top: -3rem;
+  margin-left: 7rem;
+}
+
+.header-text {
+  font-size: 4em;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, rgb(252, 73, 183), #c469b9);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.header-text h1 {
+  font-size: 3em; /* Adjust font size as needed */
+  margin: 0; /* Remove any default margins */
+  padding: 0; /* Remove any default padding */
+  line-height:0; /* Set line height to 1, or adjust as needed */
+}
+
+
+.header p {
+  margin: 0;
+}
+
+.header-image {
+  max-width: 75%;
+  height: auto;
+  margin-left: 6rem; /* Align image to the right */
+}
+
+.main-content {
+  padding: 0;
+  background: #F5F9FE;
+  width: 100vw; /* Set width to 100% of viewport width */
+}
+
+
+
+.intro,
+.features,
+.cta {
+  position: relative;
+  top: -50px;
+  max-height: 100vh;
+  width: 100%;
+  padding: 0; /* Changed from 20px to 0 */
+  background: #F5F9FE;
+  box-sizing: border-box; /* Added */
+}
+
+
+
+.intro h2,
+.features h2,
+.cta h2 {
+  position: relative;
+  top: -200px;
+  font-size: 2em;
+  background: linear-gradient(to bottom, rgb(252, 73, 183), #c469b9);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+.intro p,
+.features ul,
+.cta p {
+  position: relative;
+  top: -15rem;
+  font-size: 1.2em;
+  color: #555;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+  background: linear-gradient(to right, rgb(252, 73, 183), #c469b9);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  background: #f5f5f5;
+  border-radius: 4px;
+  margin: 10px 0;
+  padding: 10px;
+  transition: background 0.3s ease;
+}
+
+.features li:hover {
+  background: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .intro h2,
+  .features h2,
+  .cta h2 {
+    font-size: 1.5em;
+  }
+
+  .intro p,
+  .features ul,
+  .cta p {
+    font-size: 1em;
+  }
+}
+
+.cta-button {
+  display: inline-block;
+  background: #c469b9;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #cc8ebf;
+}
+
+.footer {
+  background: #EDE3FF;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+/* src/styles/Home.css */
