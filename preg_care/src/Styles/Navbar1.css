@@ -1,16 +1,23 @@
+/* src/styles/Navbar1.css */
+
 .nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
   display: flex;
-  width: 93.5rem;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #333;
-  height: 60px;
+  background: linear-gradient(to right, #cc8ebf, #c469b9);
+  z-index: 1000;
 }
 
 .logo {
   font-size: 24px;
   color: white;
+  margin-left: 2rem;
 }
 
 .menu-icon {
@@ -23,6 +30,7 @@
 .nav-links {
   display: flex;
   list-style: none;
+  margin-right: 2rem;
 }
 
 .nav-links li {
@@ -34,39 +42,11 @@
   color: white;
   font-size: 18px;
   padding: 5px 10px;
-  transition: background-color 0.3s ease;
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Add transition for smooth effect */
 }
 
 .nav-links a:hover {
-  background-color: #575757;
-  border-radius: 4px;
+  color: black; /* Change text color to black */
+  text-decoration: underline; /* Add underline */
 }
 
-.open {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #333;
-    position: absolute;
-    top: 60px;
-    left: 0;
-  }
-
-  .nav-links li {
-    text-align: center;
-    margin: 10px 0;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-}
