@@ -15,11 +15,13 @@ body {
     left: 20%;
     height: 260px;
     width: 1200px;
-    background-color: #9c61d8;
+    background-color: #8BD6CD;
     border-radius: 20px;
     flex-direction: row;
     border: #9d28d3;
     color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+            0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 h1 {
@@ -44,10 +46,12 @@ h2 {
     width: 800px;
     left: 20%;
     top: 55%;
-    background-color: #9c61d8;
+    background-color: #99C2EA;
     border: #9d28d3;
     border-radius: 24px;
     padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+            0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .txt {
@@ -96,28 +100,31 @@ h2 {
     height: 400px;
     width: 300px;
     left: 77%;
-    top: 55%;
-    background-color: #9c61d8;
-    border: #9d28d3;
+    top: 50%;
+    background-color: #FFDCE3;
+    border: #9d28d3 ;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+            0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 24px;
     padding: 20px;
-    color: white; /* Ensure text is readable against the background */
+    color: #554456; /* Ensure text is readable against the background */
 }
 
-.sidebar {
+.sidebar-container {
     position: fixed;
     top: 9%;
     left: 0;
     height: 100%;
-    background-color: #9c61d8;
-    color: white;
+    background-color: #f6b9c4;
+    color: #554456;
     width: 250px;
+    overflow: hidden; /* Hide overflow to remove scrollbar */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 20px;
 }
 
-.sidebar h3 {
+.sidebar-container h3 {
     margin: 20px 0;
 }
