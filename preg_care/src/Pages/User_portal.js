@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar2 from '../Component/Navbar2';
-import { Sidebar, Menu, MenuItem, sidebarClasses } from "react-pro-sidebar"; // Import sidebarClasses
+import { Sidebar, Menu, MenuItem ,SubMenu} from "react-pro-sidebar";
 import '../Styles/User_Portal.css';
 import { LineChart } from '@mui/x-charts';
 import ReactRoundedImage from "react-rounded-image";
@@ -57,33 +57,22 @@ function User_portal() {
   return (
     <>
       <Navbar2 />
-      <div className="sidebar">
-      <Sidebar>
-      
-        <Menu
-          menuItemStyles={{
-            button: ({ level, active, disabled }) => {
-              if (level === 0)
-                return {
-                  color: disabled ? '#f5d9ff' : '#d359ff',
-                  backgroundColor: active ? '#eecef9' : undefined,
-                };
-            },
-          }}>
-          <MenuItem component={<Link to="/User_Portal"/>}>
-            <h3>Dashboard</h3>
-          </MenuItem>
-          <MenuItem component={<Link to="/Nutrition"/>}>
-            <h3>Nutrition Tracker</h3>
-          </MenuItem>
-          <MenuItem component={<Link to="/Calendar"/>}>
-            <h3>Calendar</h3>
-          </MenuItem>
-          <MenuItem>
-            <h3>Reports</h3>
-          </MenuItem>
-          </Menu>
-         </Sidebar>
+      <div className="sidebar-container">
+        <Sidebar>
+              <Menu menuItemStyles={{
+              button: ({ level, active, disabled }) => {
+                if (level === 0)
+                  return {
+                    color: disabled ? '#f5d9ff' : '#d359ff',
+                    backgroundColor: active ? '#FEB69D' : undefined,
+                  };
+              },
+            }}>
+    <MenuItem> Dashboard </MenuItem>
+    <Link to={'/Nutrition'} style={{ textDecoration: 'none' }}><MenuItem> Nutrtion Tracker </MenuItem></Link>
+    <MenuItem> Calendar </MenuItem>
+  </Menu>
+</Sidebar>
       </div>
       <div className='Details'>
         <div style={{ marginTop: '20px', marginLeft: '20px' }}>
