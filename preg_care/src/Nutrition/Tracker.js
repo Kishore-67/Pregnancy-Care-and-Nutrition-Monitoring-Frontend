@@ -3,6 +3,8 @@ import axios from 'axios';
 import './Tracker.css'; // Import the CSS file for styles
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import Navbar2 from '../Component/Navbar2';
+import Side_bar from '../Component/Side_bar';
 
 const CaloriesCalculator = () => {
   const [foodName, setFoodName] = useState('');
@@ -57,6 +59,10 @@ const CaloriesCalculator = () => {
   };
 
   return (
+    <>          
+    <Navbar2 />
+    <Side_bar/>
+    <div className='parent'>
     <div className='back'>
       <div className="container">
         <h1>Calories Calculator</h1>
@@ -117,6 +123,8 @@ const CaloriesCalculator = () => {
         </div>
       </div>
     </div>
+    </div>
+    </>
   );
 };
 

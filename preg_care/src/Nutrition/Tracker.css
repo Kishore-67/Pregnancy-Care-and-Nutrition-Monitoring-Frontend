@@ -1,20 +1,14 @@
 /* Tracker.css */
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
+  .parent{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: #333;
+    margin-top: 10%;
+    margin-left: 20%;
   }
-  
   .back {
-    background-color: #fff;
-    border-radius: 10px;
+    background-color: #5cc0ac;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 900px; /* Adjusted width to fit horizontal layout */
