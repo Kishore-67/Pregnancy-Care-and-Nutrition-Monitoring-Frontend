@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Navbar2 from '../Component/Navbar2';
-import { Sidebar, Menu, MenuItem ,SubMenu} from "react-pro-sidebar";
 import '../Styles/User_Portal.css';
 import { LineChart } from '@mui/x-charts';
 import ReactRoundedImage from "react-rounded-image";
 import MyPhoto from "./Avatar.jpg";
 import { Link } from 'react-router-dom';
-
+import Side_bar from '../Component/Side_bar';
 function User_portal() {
   const [userDetails, setUserDetails] = useState({
     patientName: '',
@@ -57,23 +56,7 @@ function User_portal() {
   return (
     <>
       <Navbar2 />
-      <div className="sidebar-container">
-        <Sidebar>
-              <Menu menuItemStyles={{
-              button: ({ level, active, disabled }) => {
-                if (level === 0)
-                  return {
-                    color: disabled ? '#f5d9ff' : '#d359ff',
-                    backgroundColor: active ? '#FEB69D' : undefined,
-                  };
-              },
-            }}>
-    <MenuItem> Dashboard </MenuItem>
-    <Link to={'/Nutrition'} style={{ textDecoration: 'none' }}><MenuItem> Nutrtion Tracker </MenuItem></Link>
-    <MenuItem> Calendar </MenuItem>
-  </Menu>
-</Sidebar>
-      </div>
+      <Side_bar/>
       <div className='Details'>
         <div style={{ marginTop: '20px', marginLeft: '20px' }}>
           <ReactRoundedImage 
