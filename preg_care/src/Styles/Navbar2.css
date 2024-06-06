@@ -31,10 +31,21 @@
   }
   
   .nav-links li {
-    margin: 0 10px;
+    margin: 10px;
   }
   
-
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+  }
   
   .open {
     display: block;
