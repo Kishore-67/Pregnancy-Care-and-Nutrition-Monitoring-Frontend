@@ -57,6 +57,34 @@ function User_portal() {
   return (
     <>
       <Navbar2 />
+      <div className="sidebar">
+      <Sidebar>
+      
+        <Menu
+          menuItemStyles={{
+            button: ({ level, active, disabled }) => {
+              if (level === 0)
+                return {
+                  color: disabled ? '#f5d9ff' : '#d359ff',
+                  backgroundColor: active ? '#eecef9' : undefined,
+                };
+            },
+          }}>
+          <MenuItem component={<Link to="/User_Portal"/>}>
+            <h3>Dashboard</h3>
+          </MenuItem>
+          <MenuItem component={<Link to="/Nutrition"/>}>
+            <h3>Nutrition Tracker</h3>
+          </MenuItem>
+          <MenuItem component={<Link to="/Calendar"/>}>
+            <h3>Calendar</h3>
+          </MenuItem>
+          <MenuItem>
+            <h3>Reports</h3>
+          </MenuItem>
+          </Menu>
+         </Sidebar>
+      </div>
       <div className='Details'>
         <div style={{ marginTop: '20px', marginLeft: '20px' }}>
           <ReactRoundedImage 
@@ -111,42 +139,6 @@ function User_portal() {
             height={300}
           />
         </div>
-      </div>
-      
-      <div style={{ display: "flex", height: "100vh" }}>
-        <Sidebar rootStyles={{
-          [`.${sidebarClasses.container}`]: {
-            backgroundColor: '#FFCAD5',
-          },
-        }}>
-          <div style={{ position: 'relative' }}>
-            <Menu
-              menuItemStyles={{
-                button: ({ level, active, disabled }) => {
-                  if (level === 0)
-                    return {
-                      color: disabled ? '#f5d9ff' : '#d359ff',
-                      backgroundColor: active ? '#eecef9' : undefined,
-                    };
-                },
-              }}>
-              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', marginTop: '20%' }}>
-                <MenuItem component={<Link to="/User_Portal"/>}>
-                  <h3> Dashboard </h3>
-                </MenuItem>
-                <MenuItem component={<Link to="/Nutrition"/>}>
-                  <h3> Nutrition Tracker </h3>
-                </MenuItem>
-                <MenuItem component={<Link to="/Nutrition"/>}>
-                  <h3> Calendar </h3>
-                </MenuItem>
-                <MenuItem>
-                  <h3> Reports </h3>
-                </MenuItem>
-              </div>
-            </Menu>
-          </div>
-        </Sidebar>
       </div>
     </>
   );

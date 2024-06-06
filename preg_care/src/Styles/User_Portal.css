@@ -8,9 +8,8 @@ body {
     font-size: 14px;
 }
 
-.Details{
+.Details {
     display: flex;
-
     position: absolute;
     top: 15%;
     left: 20%;
@@ -22,6 +21,7 @@ body {
     border: #9d28d3;
     color: #000000;
 }
+
 h1 {
     color: #165a72;
     margin: 50px auto;
@@ -44,8 +44,8 @@ h2 {
     width: 800px;
     left: 20%;
     top: 55%;
-    background-color: #9c61d8 ;
-    border: #9d28d3 ;
+    background-color: #9c61d8;
+    border: #9d28d3;
     border-radius: 24px;
     padding: 20px;
 }
@@ -58,24 +58,13 @@ h2 {
     background-color: #9d28d3; /* Light grey background */
     color: #000000; /* Darker text color */
 }
-/* 
-.menuItem h3 {
-    margin: 0;
-    padding: 10px 20px;
-}
 
-.menuItem {
-    cursor: pointer; /* Only cursor style, no hover effect */
-
-
-/* Remove the hover effect */
 .menuItem:hover {
     background-color: transparent !important;
     color: inherit !important;
     box-shadow: none !important;
 }
 
-/* Additional specificity for react-pro-sidebar menu items */
 .menuItem.active:hover {
     background-color: #9d28d3 !important; /* Ensure active item hover stays the same */
     color: #000000 !important;
@@ -84,16 +73,7 @@ h2 {
 .menuItem:not(.active):hover h3 {
     background-color: transparent !important;
     color: inherit !important;
-} */
-
-
-/* .Details {
-    display: flex;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    margin: 20px;
-} */
+}
 
 .personal {
     margin-left: 20px;
@@ -115,11 +95,29 @@ h2 {
     flex-direction: column;
     height: 400px;
     width: 300px;
-    left: 80%;
+    left: 77%;
     top: 55%;
     background-color: #9c61d8;
     border: #9d28d3;
     border-radius: 24px;
     padding: 20px;
     color: white; /* Ensure text is readable against the background */
+}
+
+.sidebar {
+    position: fixed;
+    top: 9%;
+    left: 0;
+    height: 100%;
+    background-color: #9c61d8;
+    color: white;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.sidebar h3 {
+    margin: 20px 0;
 }
