@@ -34,7 +34,7 @@ section {
 }
 
 .header-text {
-  font-size: 4em;
+  font-size: 6em;
   margin: 0;
   padding: 0;
   background: linear-gradient(to bottom, rgb(252, 73, 183), var(--primary-color)); /* Use variable */
@@ -144,8 +144,15 @@ section {
 }
 
 
-.intro p,
-.cta p {
+.intro-text p,
+.card p{
+  font-size: 1.2rem;
+  color: var(--text-color); /* Use variable */
+  max-width: 900px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+}
+.cta p{
   font-size: 1.5rem;
   color: var(--text-color); /* Use variable */
   max-width: 900px;

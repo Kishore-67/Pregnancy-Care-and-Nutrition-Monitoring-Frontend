@@ -8,7 +8,8 @@ import Home from './Pages/Home';
 import Hospital_Reg from './Authentication/Hospital_Reg';
 import Doctor_log from './Authentication/Doctor_log.js';
 import User_log from './Authentication/User_log.js';
-import Portal from './Pages/Portal.js'
+import Portal from './Pages/Portal.js';
+import Hos_portal from './Pages/Hos_portal.js';
 import Doc_Portal from './Pages/Doc_portal.js';
 import User_portal from './Pages/User_portal.js';
 const appRouter = createBrowserRouter([
@@ -44,6 +45,9 @@ const appRouter = createBrowserRouter([
   {
     path:'/Doc_Portal',
     element:<Doc_Portal/>
+  },{
+    path:"/hos-portal",
+    element:<Hos_portal/>
   }
   
 ]);
