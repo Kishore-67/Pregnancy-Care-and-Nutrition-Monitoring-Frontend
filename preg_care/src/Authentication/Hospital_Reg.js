@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Typography, TextField, Button, makeStyles, Grid } from '@material-ui/core';
 import myImage from './hospital-building1.jpg';
-
+import Navbar1 from '../Component/Navbar1'
 const useStyles = makeStyles((theme) => ({
   Container:{
     backgroundColor:'#91B8F4',
@@ -87,6 +87,7 @@ const Hospital_Reg = () => {
 
   return (
     <>
+    <Navbar1/>
     <div>
       <Container>
         <div className={classes.Main}>

@@ -3,9 +3,9 @@ import Navbar2 from '../Component/Navbar2';
 import '../Styles/User_Portal.css';
 import { LineChart } from '@mui/x-charts';
 import ReactRoundedImage from "react-rounded-image";
-import MyPhoto from "./Avatar.jpg";
+import MyPhoto from "../assets/Avatar.jpg";
 import { Link } from 'react-router-dom';
-import Side_bar from '../Component/Side_bar';
+import Sidebar from '../Component/P-Sidebar';
 function User_portal() {
   const [userDetails, setUserDetails] = useState({
     patientName: '',
@@ -56,7 +56,7 @@ function User_portal() {
   return (
     <>
       <Navbar2 />
-      <Side_bar/>
+      <Sidebar/>
       <div className='Details'>
         <div style={{ marginTop: '20px', marginLeft: '20px' }}>
           <ReactRoundedImage 
