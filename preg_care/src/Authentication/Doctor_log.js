@@ -101,7 +101,7 @@ const Doc_log = () => {
               onChange={handleChange}
               required
             />
-            <Link to={'/'}>
+            <Link to={'/Doc_Portal'}>
               <Button
                 className={classes.submitButton}
                 variant="contained"
