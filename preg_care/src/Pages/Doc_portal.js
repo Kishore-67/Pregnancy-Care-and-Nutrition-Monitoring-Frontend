@@ -3,6 +3,7 @@ import Navbar2 from '../Component/Navbar2'
 import Sidebar from '../Component/D-Sidebar'
 import '../Styles/User_Portal.css'
 import '../Styles/User_Portal.css'
+import { Link } from 'react-router-dom'
 function Doc_Portal() {
   return (
     <>
@@ -11,8 +12,7 @@ function Doc_Portal() {
     <div className='Details'>
         <div style={{ marginTop: '20px', marginLeft: '20px' }}>
           
-        </div>
-      
+       </div>
      
     </div>
     </>

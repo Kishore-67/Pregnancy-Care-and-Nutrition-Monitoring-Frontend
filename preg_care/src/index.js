@@ -11,6 +11,7 @@ import User_log from './Authentication/User_log.js';
 import Portal from './Pages/Portal.js'
 import Doc_Portal from './Pages/Doc_portal.js';
 import User_portal from './Pages/User_portal.js';
+import PatientDetails from './Pages/Patient.js';
 
 
 const appRouter = createBrowserRouter([
@@ -47,6 +48,12 @@ const appRouter = createBrowserRouter([
     path:'/Doc_Portal',
     element:<Doc_Portal/>
   },
+  {
+    path:'/Details',
+    element:<PatientDetails/>
+  },
+  
+  
 
 
 
