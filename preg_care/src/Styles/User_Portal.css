@@ -1,11 +1,14 @@
 body {
-    margin: 0;
-    font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Figtree", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    height: 100vh;
-    background: #ffffff;
-    font-size: 24px;
+    
+        background: #F5F9FE; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        height: 100vh; /* Full viewport height */
+        width: 100%; /* Full viewport width */
+        text-align: center;
+        display: flex; /* Use Flexbox for centering content */
+        flex-direction: column;/* Add some padding for better spacing */
+        box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+        font-family: "Kanit", sans-serif;
+      
 }
 .app {
     background: #a8d5e5;
