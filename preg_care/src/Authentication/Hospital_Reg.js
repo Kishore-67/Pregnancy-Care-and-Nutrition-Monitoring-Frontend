@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Container, Typography, TextField, Button, makeStyles, Grid } from '@material-ui/core';
 import myImage from './hospital-building1.jpg';
-import Navbar1 from '../Component/Navbar1'
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+
 const useStyles = makeStyles((theme) => ({
   Container:{
     backgroundColor:'#91B8F4',
@@ -69,25 +71,26 @@ const Hospital_Reg = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // You can add your registration logic here, e.g., send data to backend API
-    console.log(formData);
-    // Reset form fields after submission
-    setFormData({
-      name: '',
-      address: '',
-      phone: '',
-      email: '',
-      password: '',
-      description: '',
-      facilities: '',
-    });
-  };
+
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await axios.post('http://localhost:5000/api/hospital/signup-hospital', formData);
+    console.log('Registration successful:', response.data);
+    // Reset form fields after successful registration
+    setFormData({ name: '', address: '', phone: '', email: '', password: '', description: '', facilities: '' });
+
+
+  } catch (error) {
+    console.error('Error registering hospital:', error.response.data);
+    // Handle error, e.g., display error message to user
+  }
+};
+
 
   return (
     <>
-    <Navbar1/>
     <div>
       <Container>
         <div className={classes.Main}>
@@ -168,14 +171,14 @@ const Hospital_Reg = () => {
               onChange={handleChange}
               required
             />
-            <Button
+            <Link to={'/hos-portal'}><Button
               className={classes.submitButton}
               type="submit"
               variant="contained"
               color="primary"
             >
               Register
-            </Button>
+            </Button></Link>
           </form>
         </div>
       </Container>
