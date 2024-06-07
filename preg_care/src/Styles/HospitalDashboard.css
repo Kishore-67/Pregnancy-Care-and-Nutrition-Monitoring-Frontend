@@ -1,0 +1,40 @@
+.hospital-dashboard {
+    display: flex;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 40px;
+  }
+  
+  .hospital-card {
+    position: fixed;
+    top: 7rem;
+    right: 4rem;
+    width: 1000px;
+    height: 600px;
+    background-color: #e5d2de;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hospital-card h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  
+  .hospital-card p {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .hospital-card strong {
+    margin-right: 50rem;
+  }
+  
+  .hospital-card p:last-child {
+    margin-bottom: 0;
+  }
+  
