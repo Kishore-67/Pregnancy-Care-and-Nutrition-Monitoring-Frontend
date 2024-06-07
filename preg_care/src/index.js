@@ -6,12 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from './Pages/Home';
 import Hospital_Reg from './Authentication/Hospital_Reg';
-import Doctor_log from './Authentication/Doctor_log.js';
+import Doc_log from './Authentication/Doctor_log.js';
 import User_log from './Authentication/User_log.js';
 import Portal from './Pages/Portal.js'
 import Doc_Portal from './Pages/Doc_portal.js';
 import User_portal from './Pages/User_portal.js';
 import CaloriesCalculator from './Nutrition/Tracker.jsx'
+import CaloriesCalculator from './Nutrition/Tracker.js';
 const appRouter = createBrowserRouter([
   
   {
@@ -31,8 +32,8 @@ const appRouter = createBrowserRouter([
     element:<Home/>
   },
   {
-    path:'/Doctor_log',
-    element:<Doctor_log/>
+    path:'/Doc_log',
+    element:<Doc_log/>
   },
   {
     path:'/Hospital_reg',

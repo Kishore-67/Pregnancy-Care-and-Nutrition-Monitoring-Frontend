@@ -1,18 +1,39 @@
+// User_log.css
+
 import React, { useState } from 'react';
 import { Container, Typography, TextField, Button, makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import Image from '../assets/preg-women.png'; // Import your image
 
 const useStyles = makeStyles((theme) => ({
-  formContainer: {
-    marginTop: theme.spacing(4),
+  root: {
     display: 'flex',
-    flexDirection: 'column',
+    minHeight: '100vh',
+  },
+  leftSection: {
+    flex: 1,
+    backgroundColor: '#f2f2f2', // Left section background color
+    padding: theme.spacing(4),
+    display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+  },
+  image: {
+    width: '80%',
+    maxWidth: 400,
+    marginBottom: theme.spacing(2),
+  },
+  formContainer: {
+    flex: 1,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft:'19%',
   },
   form: {
     width: '100%',
     maxWidth: 400,
-    marginTop: theme.spacing(2),
   },
   textField: {
     marginBottom: theme.spacing(2),
@@ -25,11 +46,8 @@ const useStyles = makeStyles((theme) => ({
 const User_log = () => {
   const classes = useStyles();
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
     password: '',
-    phone_no: '',
-    whatsapp_no: ''
   });
 
   const handleChange = (e) => {
@@ -40,87 +58,61 @@ const User_log = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    setFormData({
-      name: '',
-      email: '',
-      password: '',
-      phone_no: '',
-      whatsapp_no: ''
-    });
+    setFormData({ email: '', password: '' });
   };
 
   return (
-    <Container>
-      <Typography variant="h4" gutterBottom align="center">
-        User Registration
-      </Typography>
-      <div className={classes.formContainer}>
-        <form className={classes.form} onSubmit={handleSubmit}>
-          <TextField
-            className={classes.textField}
-            fullWidth
-            variant="outlined"
-            label="Name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <TextField
-            className={classes.textField}
-            fullWidth
-            variant="outlined"
-            label="Email"
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <TextField
-            className={classes.textField}
-            fullWidth
-            variant="outlined"
-            label="Password"
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-          <TextField
-            className={classes.textField}
-            fullWidth
-            variant="outlined"
-            label="Phone Number"
-            name="phone_no"
-            value={formData.phone_no}
-            onChange={handleChange}
-            required
-          />
-          {/* <TextField
-            className={classes.textField}
-            fullWidth
-            variant="outlined"
-            label="WhatsApp Number"
-            name="whatsapp_no"
-            value={formData.whatsapp_no}
-            onChange={handleChange}
-            required
-          /> */}
-          <Link to={'/User_Portal'}>
-            <Button
-            className={classes.submitButton}
-            // type="submit"
-            variant="contained"
-            color="primary"
-          >
-            Login
-          </Button>
-          </Link>
-        </form>
+    <div className={classes.root}>
+      <div className={classes.leftSection}>
+        <Typography variant="h4" gutterBottom align="center">
+          Welcome Back!
+        </Typography>
+        <img src={Image} alt="Your Image" className={classes.image} />
+        <Typography variant="body1" align="center">
+          Add some text content here...
+        </Typography>
       </div>
-    </Container>
+      <div className={classes.formContainer}>
+        <Container>
+          <Typography variant="h4" gutterBottom  >
+            User Registration
+          </Typography>
+          <form className={classes.form} onSubmit={handleSubmit}>
+            <TextField
+              className={classes.textField}
+              fullWidth
+              variant="outlined"
+              label="Email"
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <TextField
+              className={classes.textField}
+              fullWidth
+              variant="outlined"
+              label="Password"
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              required
+            />
+            <Link to={'/User_Portal'}>
+              <Button
+                className={classes.submitButton}
+                variant="contained"
+                color="primary"
+              >
+                Login
+              </Button>
+            </Link>
+          </form>
+        </Container>
+      </div>
+    </div>
   );
 };
 
