@@ -10,6 +10,8 @@ div {
   
   /* Styling for the search bar and button */
   input[type="text"] {
+    margin-left: 29px;
+    margin-top: 70px;
     padding: 8px;
     margin-right: 10px;
     border: 1px solid #ccc;
@@ -20,6 +22,7 @@ div {
   button {
     position: absolute;
     margin-left: 500px;
+    margin-top: 70px;
     /* margin-top: 50pxpx; */
     padding: 8px 16px;
     background-color: #007bff;
@@ -35,6 +38,7 @@ div {
   
   /* Styling for the table */
   table {
+    margin-left: 300px;
     width: 80%;
     border-collapse: collapse;
     margin-top: 20px;

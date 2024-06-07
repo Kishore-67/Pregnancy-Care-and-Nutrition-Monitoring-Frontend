@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../Styles/Patient.css';  // Ensure you have the CSS file
+import Navbar1 from '../Component/Navbar2';
+import Sidebar from "../Component/D-Sidebar";
 
 const PatientDetails = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -20,6 +22,8 @@ const PatientDetails = () => {
 
   return (
     <div>
+        <Navbar1/>
+        <Sidebar/>
       <div>
         <input 
           type="text" 
