@@ -28,8 +28,8 @@ function Sidebar() {
       </div>
       <nav className="menu">
         <ul>
-          <li><a href="/dashboard">Dashboard</a></li>
-          <li><a href="/medical-records">Patient Details</a></li>
+          <li><a href="/Doc_Portal">Dashboard</a></li>
+          <li><a href="/patient_details">Patient Details</a></li>
         </ul>
       </nav>
     </div>
