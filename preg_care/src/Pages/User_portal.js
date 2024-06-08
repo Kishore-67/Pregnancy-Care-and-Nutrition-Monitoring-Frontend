@@ -13,8 +13,26 @@ function User_portal() {
     doctorName: '',
     doctorNumber: '',
     hospitalName: '',
-    hospitalNumber: ''
+    hospitalNumber: '',
+    Pregnancymonth:'',
+    Checkups:'',
+
   });
+
+
+  useEffect(() => {
+    // Replace with your actual API endpoint
+    fetch('https://api.example.com/userDetails')
+      .then(response => response.json())
+      .then(data => {
+        setUserDetails({
+          name: data.name,
+          Pregnancymonth: data.Pregnancymonth,
+          Checkups: data.Checkups, 
+        });
+      })
+      .catch(error => console.error('Error fetching doctor details:', error));
+  }, []);
 
   useEffect(() => {
     // Replace with your actual API endpoint
@@ -57,22 +75,25 @@ function User_portal() {
     <>
       <Navbar2 />
       <Sidebar/>
-      <div className='Details'>
-        <div style={{ marginTop: '20px', marginLeft: '20px' }}>
-          <ReactRoundedImage 
-            image={MyPhoto} 
-            roundedSize="0"
-            imageWidth="200"
-            imageHeight="200"
-          />
-        </div>
-        <div className='personal'>
-          <h2>Personal Details</h2>
-          <p><strong>Name:</strong> Jane Doe</p>
-          <p><strong>Age:</strong> 28</p>
-          <p><strong>Pregnancy Month:</strong> 5th Month</p>
+        
+        <div className="Details">
+        <div className="details-container">
+          <div className="detail-item">
+            <strong>Name</strong>
+            <div>{userDetails.name}</div>
+          </div>
+          <div className="detail-item">
+            <strong>Pregnancy Month</strong>
+            <div>{userDetails.Pregnancymonth}</div>
+          </div>
+          <div className="detail-item">
+            <strong>Checkups</strong>
+            <div>{userDetails.Checkups}</div>
+          </div>
+          
         </div>
       </div>
+     
       <div className='personal-details'>
         <h2>Personal Details</h2>
         <p><strong>Patient Name:</strong> {userDetails.patientName}</p>

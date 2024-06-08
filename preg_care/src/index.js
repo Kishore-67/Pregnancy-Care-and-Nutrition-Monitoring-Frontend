@@ -13,6 +13,7 @@ import Doc_Portal from './Pages/Doc_portal.js';
 import User_portal from './Pages/User_portal.js';
 import CaloriesCalculator from './Nutrition/Tracker.js';
 import HospitalDashboard from './Pages/Hos_portal.js';
+import PatientDetails from './Pages/Patient_details.js';
 const appRouter = createBrowserRouter([
   
   {
@@ -53,6 +54,10 @@ const appRouter = createBrowserRouter([
   {
     path:"/hos-portal",
     element:<HospitalDashboard/>
+  },
+  {
+    path:"/patient_details",
+    element:<PatientDetails/>
   }
   
 ]);

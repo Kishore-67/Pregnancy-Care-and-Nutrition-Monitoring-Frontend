@@ -28,10 +28,10 @@ function Sidebar() {
       </div>
       <nav className="menu">
         <ul>
-          <li><a href="/dashboard">Dashboard</a></li>
-          <li><a href="/medical-records">Medical Records</a></li>
-          <li><a href="/nutrition-tracker">Nutrition Tracker</a></li>
-          <li><a href="/personal-details">Personal Details</a></li>
+          <li><a href="/User_Portal">Dashboard</a></li>
+          
+          <li><a href="/Nutrition">Nutrition Tracker</a></li>
+          {/* <li><a href="/medical-records">Medical Records</a></li> */}
         </ul>
       </nav>
     </div>
